@@ -356,8 +356,8 @@ document.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
 
     // Adjust this number to control how fast it fades
-    const fadeStart = 0;      // where fading begins
-    const fadeEnd = 300;      // where it becomes fully invisible
+    const fadeStart = 50;      // where fading begins
+    const fadeEnd = 400;      // where it becomes fully invisible
 
     let opacity = 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart);
     opacity = Math.max(0, Math.min(1, opacity)); // clamp between 0–1
