@@ -8,6 +8,13 @@
 
 
 <style>
+.resume-section {
+  width: 80%;              /* or a fixed width like 900px */
+  margin: 0 auto;          /* centers horizontally */
+  background: url('background.jpg') center/cover no-repeat;
+  padding: 40px;           /* keeps text away from edges */
+  box-sizing: border-box;
+}	
 .resume-photo {
 	float: right;
     width: 60px;
@@ -128,7 +135,7 @@ main {
       <h2>Work Experience</h2>
 
 
-        <h3>Content Manager, Online Business Banking</h3>
+        <h3>Content Manager, Online Business Banking</h3><img src="assets/images/bmo.jpg" alt="BMO" class="resume-photo">
           <p><em>BMO Financial, Toronto — February 2025&nbsp;– Present</em></p>
         
 
@@ -298,9 +305,10 @@ main {
   <li>Promoting  Canadian city life to visitors from around the world.</li>
   <li>Interacted  with global citizens using English, Mandarin Chinese.</li>
 </ul>
-  <h2>Skills</h2>
+<div class="skills-section">	
+  <h2 align="center">Skills</h2>
 
-      <table>
+      <table align="center">
         <tbody>
           <tr>
             <td font align="center">
@@ -379,6 +387,7 @@ main {
           </tr>
         </tbody>
       </table>
+	</div>
 <script>
 document.addEventListener("scroll", () => {
     const sun = document.querySelector(".sun-top-right");
