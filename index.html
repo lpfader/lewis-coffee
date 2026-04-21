@@ -1,10 +1,86 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>This page was created by me using Node.js</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lewis Resume</title>
+
+<style>
+
+/* Full-page background */
+body {
+    margin: 0;
+    padding: 0;
+    background: url("assets/images/background.png") center top no-repeat fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+/* Fixed left banner */
+.left-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background: url("assets/images/office-image.png") center top no-repeat;
+    background-size: cover;
+    z-index: 5;
+}
+
+/* Fixed right banner */
+.right-banner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    background: url("assets/images/outdoors-image.png") center top no-repeat;
+    background-size: cover;
+    z-index: 5;
+}
+
+/* Resume content container */
+main {
+    width: 60%;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    z-index: 10;
+    position: relative;
+}
+
+/* Mobile: hide banners */
+@media (max-width: 1200px) {
+    .left-banner, .right-banner {
+        display: none;
+    }
+    main {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+</style>
 </head>
+
+<body>
+
+<div class="left-banner"></div>
+<div class="right-banner"></div>
+
+<main>
+ 
+<!DOCTYPE html>
+
+
+  <title>This page was created by me using Node.js</title>
+
+
 <body>
 	
 <h1>Lewis Fader Résumé</h1>	
@@ -256,5 +332,10 @@
           </tr>
         </tbody>
       </table>
+</body>
+
+
+</main>
+
 </body>
 </html>
