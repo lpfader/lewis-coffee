@@ -113,6 +113,36 @@ main {
         margin: 20px auto;
     }
 }
+/* Modal background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+/* Modal box */
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 60%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Close button */
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
 </style>
 </head>
@@ -122,6 +152,20 @@ main {
 <div class="right-banner"></div>
 
 <main>
+<!-- Trigger element (image example) -->
+<img id="openModalImage" src="assets/images/gvch-moon.png" alt="Open modal" style="width:150px; cursor:pointer;" />
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <!-- Your modal content goes here -->
+    <h2>Modal Title</h2>
+    <p>This has been created as a complex presentation of HTML using Node.js. I designed it to take advantage of in-line css and Javascript and make multiple uploads without needing a full React deployment. While for an example of my React app please visit <a href="https://lpfader.github.io/lewis_page/" target="_blank">here</a>.</p>
+
+  </div>
+</div>
 
 <div class="header-wrap">
     <h1>Lewis Fader Résumé</h1>
@@ -403,7 +447,37 @@ document.addEventListener("scroll", () => {
     sun.style.opacity = opacity;
 });
 </script>
+
 </main>
+<script>
+  const modal = document.getElementById("myModal");
+  const openLink = document.getElementById("openModalLink");
+  const openImage = document.getElementById("openModalImage");
+  const closeBtn = document.querySelector(".close");
+
+  // Open modal from link
+  openLink.onclick = function(e) {
+    e.preventDefault();
+    modal.style.display = "block";
+  };
+
+  // Open modal from image
+  openImage.onclick = function() {
+    modal.style.display = "block";
+  };
+
+  // Close modal
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  };
+
+  // Close when clicking outside modal box
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
 
 </body>
 </html>
