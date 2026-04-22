@@ -128,9 +128,9 @@ main {
 /* Modal box */
 .modal-content {
   position: absolute;
-  top: 50%;
+  top: 80px;        /* fixed distance from top of viewport */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   background: #fff;
   padding: 20px;
   width: 60%;
@@ -138,6 +138,7 @@ main {
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
+
 
 /* Close button */
 .close {
