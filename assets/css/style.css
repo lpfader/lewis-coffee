@@ -1,0 +1,151 @@
+/* --------------------------------------------------
+   GLOBAL BASE STYLES
+-------------------------------------------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("assets/images/background.png") center top no-repeat fixed;
+    background-size: cover;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    line-height: 1.55;
+    color: #2b2b2b;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+h2 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+p, li {
+    font-family: 'Lora', serif;
+    margin-bottom: 12px;
+}
+
+/* --------------------------------------------------
+   FIXED DECORATIVE ELEMENTS
+-------------------------------------------------- */
+
+/* Sun image — DO NOT TOUCH */
+.sun-top-right {
+    position: absolute;
+    top: 10px;
+    right: 109px;
+    width: 290px;
+    height: 438px;
+    z-index: 5;
+}
+
+/* Left banner */
+.left-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background: url("assets/images/office-image.png") center top no-repeat;
+    background-size: cover;
+    z-index: 5;
+}
+
+/* Right banner */
+.right-banner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    background: url("assets/images/outdoors-image.png") center top no-repeat;
+    background-size: cover;
+    z-index: 5;
+}
+
+/* --------------------------------------------------
+   MAIN CONTENT CONTAINER
+-------------------------------------------------- */
+
+main {
+    width: 60%;
+    margin: 40px auto 80px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Resume photo */
+.resume-photo {
+    float: right;
+    width: 60px;
+    margin: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* --------------------------------------------------
+   MODAL STYLES
+-------------------------------------------------- */
+
+/* Modal overlay */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+/* Modal box — anchored near top */
+.modal-content {
+    position: absolute;
+    top: 120px; /* consistent vertical placement */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 20px;
+    width: 60%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Close button */
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------
+   MOBILE RESPONSIVE
+-------------------------------------------------- */
+
+@media (max-width: 1200px) {
+    .left-banner,
+    .right-banner {
+        display: none;
+    }
+
+    main {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .modal-content {
+        width: 85%;
+    }
+}
