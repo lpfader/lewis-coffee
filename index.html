@@ -51,8 +51,8 @@ h1, h2, h3 {
 	
 .sun-top-right {
     position: absolute;
-    top: 119px;
-    right: 136px;
+    top: 10px;
+    right: 109px;
     width: 290px;
     height: 438px;
     z-index: 5;
@@ -155,7 +155,8 @@ main {
 
 
 <div class="header-wrap">
-    <h1>Lewis Fader Résumé</h1>
+    <h1 id="openModalHeader" style="cursor:pointer;">Lewis Fader Résumé</h1>
+
     
 </div>
 	
@@ -412,14 +413,14 @@ main {
           </tr>
 
           <tr>
-            <td font align="center">
-              AODA (WCAG AA) &amp; SEO Best Practices
+            <td font align="center"><hr>
+              AODA (WCAG AA) &amp; SEO Best Practices<hr><!-- Trigger element (image example) -->
+<img id="openModalImage" src="assets/images/gvch-moon.png" alt="Open modal" style="width:150px; cursor:pointer; align-content: center" />
             </td>
           </tr>
         </tbody>
       </table>
-	<!-- Trigger element (image example) -->
-<img id="openModalImage" src="assets/images/gvch-moon.png" alt="Open modal" style="width:150px; cursor:pointer; align-content: center" />
+
 
 <!-- Modal -->
 <div id="myModal" class="modal">
@@ -455,9 +456,16 @@ document.addEventListener("scroll", () => {
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("myModal");
-  const openLink = document.getElementById("openModalLink");
   const openImage = document.getElementById("openModalImage");
+  const openLink = document.getElementById("openModalLink");
+  const openHeader = document.getElementById("openModalHeader");
   const closeBtn = document.querySelector(".close");
+
+  if (openImage) {
+    openImage.addEventListener("click", () => {
+      modal.style.display = "block";
+    });
+  }
 
   if (openLink) {
     openLink.addEventListener("click", (e) => {
@@ -466,8 +474,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (openImage) {
-    openImage.addEventListener("click", () => {
+  if (openHeader) {
+    openHeader.addEventListener("click", () => {
       modal.style.display = "block";
     });
   }
@@ -483,5 +491,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+
 </body>
 </html>
